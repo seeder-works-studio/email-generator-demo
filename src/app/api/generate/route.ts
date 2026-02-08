@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
   });
 
   try {
-    const llmResponse = await callLLMGateway(userPrompt, {
+    const llmResponse = await callGemini(userPrompt, {
       systemPrompt,
       maxTokens: 3000,
     });

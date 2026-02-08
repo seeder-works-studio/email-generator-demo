@@ -81,7 +81,7 @@ export default async function LandingPage() {
       <footer className="border-t border-gray-200 py-4 px-8">
         <div className="flex justify-between items-center text-sm text-gray-400">
           <span>SeederWorks — AI Solutions Partner</span>
-          <span>Powered by LLM Gateway</span>
+          <span>Powered by Gemini</span>
         </div>
       </footer>
     </div>
