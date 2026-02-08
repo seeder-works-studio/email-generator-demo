@@ -62,6 +62,9 @@ export default function Navbar({
         <Link href="/settings" className={linkClass("/settings")}>
           Settings
         </Link>
+        <Link href="/spreadsheet" className={linkClass("/spreadsheet")}>
+          Spreadsheets
+        </Link>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="relative h-8 w-8 rounded-full">

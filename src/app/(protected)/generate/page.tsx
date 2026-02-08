@@ -66,6 +66,15 @@ export default function GeneratePage() {
         setScrapeResult(result);
         if (result.company_name && result.company_name !== "Unknown") {
           setCompanyName(result.company_name);
+        } else {
+          // Fallback: try to derive from URL
+          try {
+            const domain = new URL(url).hostname.replace("www.", "").split(".")[0];
+            const cap = domain.charAt(0).toUpperCase() + domain.slice(1);
+            setCompanyName(cap);
+          } catch {
+            setCompanyName("");
+          }
         }
       }
     } catch (err) {
@@ -211,10 +220,10 @@ export default function GeneratePage() {
               type="text"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
-              placeholder="Auto-filled from URL scan"
+              placeholder="e.g. Acme Corp"
             />
             <p className="text-xs text-gray-400 mt-1">
-              Auto-filled from URL scan. Edit if needed.
+              Check this field after scanning. If empty, please enter the name manually.
             </p>
           </div>
 
