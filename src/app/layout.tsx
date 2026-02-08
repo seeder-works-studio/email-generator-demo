@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SeederWorks — Email Generator",
   description: "AI-powered cold email generator that actually gets replies",
+  icons: {
+    icon: "/logo.svg",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
