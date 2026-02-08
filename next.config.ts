@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    runtime: "experimental-edge",
-  },
+  /* config options here */
 };
 
 export default nextConfig;
