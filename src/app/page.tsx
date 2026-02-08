@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { createClient } from "@/lib/supabase/server";
 
 export default async function LandingPage() {
@@ -10,7 +11,10 @@ export default async function LandingPage() {
   return (
     <div className="min-h-screen bg-white">
       <nav className="flex items-center justify-between px-8 py-4 border-b border-gray-200">
-        <span className="font-bold text-xl text-gray-900">SeederWorks</span>
+        <div className="flex items-center gap-2">
+          <Image src="/seederworkslogo.svg" alt="SeederWorks Logo" width={32} height={32} />
+          <span className="font-bold text-xl text-gray-900">SeederWorks</span>
+        </div>
         <div>
           {user ? (
             <Link
