@@ -77,6 +77,10 @@ export async function POST(request: NextRequest) {
 
     if (dbError) {
       console.error("Failed to save email:", dbError);
+      return NextResponse.json(
+        { error: `Database Error: ${dbError.message}` },
+        { status: 500 }
+      );
     }
 
     // Log activity
