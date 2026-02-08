@@ -17,8 +17,19 @@ export const metadata: Metadata = {
   title: "SeederWorks — Email Generator",
   description: "AI-powered cold email generator that actually gets replies",
   icons: {
-    icon: "/logo.svg",
-    apple: "/logo.png",
+    icon: "/seederworkslogo.svg",
+    apple: "/seederworkslogo.png",
+  },
+  openGraph: {
+    title: "SeederWorks — Email Generator",
+    description: "AI-powered cold email generator that actually gets replies",
+    images: ["/seederworkslogo.png"],
+  },
+  twitter: {
+    card: "summary",
+    title: "SeederWorks — Email Generator",
+    description: "AI-powered cold email generator that actually gets replies",
+    images: ["/seederworkslogo.png"],
   },
 };
 
