@@ -8,3 +8,11 @@ enabled = true
 [vars]
 NEXT_PUBLIC_SUPABASE_URL = "https://rameqnwlaldxwqqisrzq.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_Wv9W8ltwOoPFdwp5FhrPrQ_l1X8cfqh"
+
+[env.production.vars]
+NEXT_PUBLIC_SUPABASE_URL = "https://rameqnwlaldxwqqisrzq.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_Wv9W8ltwOoPFdwp5FhrPrQ_l1X8cfqh"
+
+[env.preview.vars]
+NEXT_PUBLIC_SUPABASE_URL = "https://rameqnwlaldxwqqisrzq.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY = "sb_publishable_Wv9W8ltwOoPFdwp5FhrPrQ_l1X8cfqh"
