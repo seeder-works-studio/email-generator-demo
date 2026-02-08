@@ -160,30 +160,32 @@ export default function ResultsPage() {
         </Button>
       </div>
 
-      <div className="border-t border-gray-200 pt-4">
-        <button
-          onClick={() => setShowContext(!showContext)}
-          className="text-sm text-blue-600 hover:underline"
-        >
-          {showContext ? "\u25BE" : "\u25B8"} View scraped company context
-        </button>
-        {showContext && result.scraped_context && (
-          <div className="mt-3 bg-white border border-gray-200 rounded-lg p-4 text-xs text-gray-500">
-            <p>
-              <strong>Source:</strong> {formData?.company_url}
-            </p>
-            <p>
-              <strong>Company:</strong> {result.scraped_context.company_name}
-            </p>
-            <p>
-              <strong>Description:</strong> {result.scraped_context.description}
-            </p>
-            <p>
-              <strong>Services:</strong> {result.scraped_context.services}
-            </p>
-          </div>
-        )}
-      </div>
+      {result.scraped_context && (
+        <div className="border-t border-gray-200 pt-4">
+          <button
+            onClick={() => setShowContext(!showContext)}
+            className="text-sm text-blue-600 hover:underline"
+          >
+            {showContext ? "\u25BE" : "\u25B8"} View scraped company context
+          </button>
+          {showContext && (
+            <div className="mt-3 bg-white border border-gray-200 rounded-lg p-4 text-xs text-gray-500">
+              <p>
+                <strong>Source:</strong> {formData?.company_url}
+              </p>
+              <p>
+                <strong>Company:</strong> {result.scraped_context.company_name}
+              </p>
+              <p>
+                <strong>Description:</strong> {result.scraped_context.description}
+              </p>
+              <p>
+                <strong>Services:</strong> {result.scraped_context.services}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
